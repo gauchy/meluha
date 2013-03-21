@@ -6,7 +6,7 @@ import com.meluha.common.logging.LoggingHelper;
 
 public class BusinessRuntimeException  extends RuntimeException
 {
-	Loggable log = LoggingHelper.getBusinessLogger(BusinessException.class);
+	Loggable log = LoggingHelper.getBusinessLogger(BusinessRuntimeException.class);
 	public BusinessRuntimeException(Throwable e)
 	{
 		if(LoggingConstants.log_business_exception)

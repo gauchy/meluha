@@ -1,12 +1,13 @@
 package com.meluha.persistence.exception;
 
+import com.meluha.common.Persistence;
 import com.meluha.common.logging.Loggable;
 import com.meluha.common.logging.LoggingConstants;
 import com.meluha.common.logging.LoggingHelper;
 
-public class PersistenceRuntimeException extends RuntimeException
+public class PersistenceRuntimeException extends RuntimeException implements Persistence
 {
-	Loggable log = LoggingHelper.getPersistenceLogger(PersistenceRuntimeException.class);
+	Loggable log = LoggingHelper.getLogger(PersistenceRuntimeException.class);
 	PersistenceRuntimeException(Throwable e)
 	{
 		if(LoggingConstants.log_persistence_exception)
